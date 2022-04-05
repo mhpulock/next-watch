@@ -1,8 +1,12 @@
 import React from "react";
 import "./Header.css";
 import logo from "../../image/travel-logo.png";
+import { Link } from "react-router-dom";
+import useFirebase from "../../hooks/useFirebase";
 
 const Header = () => {
+  const { user, logout } = useFirebase();
+
   return (
     <div>
       <nav
@@ -10,12 +14,12 @@ const Header = () => {
         style={{ backgroundColor: "#FFFFFF" }}
       >
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/home">
             <div className="navber-logo">
               <h1>Fab</h1>
               <img className="img-logo" src={logo} alt="logo" />
             </div>
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -30,20 +34,32 @@ const Header = () => {
           <div className="collapse navbar-collapse " id="navbarTogglerDemo02">
             <ul className="navbar-nav ms-auto ">
               <li className="nav-item ">
-                <a className="nav-link link-button cursor" href="#">
+                <Link className="nav-link link-button cursor" to="/home">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item ">
-                <a className="nav-link link-button cursor" href="#">
+                <Link className="nav-link link-button cursor" to="/Service">
                   Servive
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link-button cursor" href="#">
+                <Link className="nav-link link-button cursor" to="/login">
                   Sign-In/Up
-                </a>
+                </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link link-button" to="">
+                  {user.displayName}
+                </Link>
+              </li>
+              {user?.email && (
+                <li className="nav-item">
+                  <button onClick={logout} className="link-button cursor">
+                    Logout
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
         </div>
