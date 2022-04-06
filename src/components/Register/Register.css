@@ -1,0 +1,30 @@
+.registerBody {
+  font-family: "Poppins", sans-serif;
+}
+input {
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.registerTitle {
+  text-shadow: 5px 5px 5px gray;
+}
+.registerbuttondesign {
+  border-radius: 20px;
+  height: 35px;
+  border: none;
+  padding: 7px 20px;
+  box-shadow: 5px 5px 20px gray;
+  width: 80%;
+}
+.cardRegisterbody {
+  width: 100%;
+  box-shadow: 10px 10px 40px gray;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 50px 0 50px 0;
+}
+.icon {
+  height: 25px;
+  width: auto;
+  margin-right: 5px;
+}

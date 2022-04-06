@@ -1,11 +1,11 @@
 import React from "react";
 import "./Banner.css";
 import { Carousel } from "react-bootstrap";
-import slide1 from "../../slider/slide1.jpg";
-import slide2 from "../../slider/slide2.jpg";
-import slide3 from "../../slider/slide3.jpg";
-import slide4 from "../../slider/slide4.jpg";
-import slide5 from "../../slider/slide5.jpg";
+import slide1 from "../../slider/slide2.jpg";
+import slide2 from "../../slider/slide3.jpg";
+import slide3 from "../../slider/slide4.jpg";
+import slide4 from "../../slider/slide5.jpg";
+import slide5 from "../../slider/slide1.jpg";
 
 const Banner = () => {
   return (
