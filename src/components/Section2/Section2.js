@@ -75,7 +75,7 @@ const Section2 = () => {
                 <br />
                 <div className="pb-3">
                   <Link className="bookNow">Book Now</Link>
-                  <Link className="addList">Add To List</Link>
+                  <Link className="details">See Details</Link>
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@ const Section2 = () => {
                 <br />
                 <div className="pb-3">
                   <Link className="bookNow">Book Now</Link>
-                  <Link className="addList">Add To List</Link>
+                  <Link className="details">See Details</Link>
                 </div>
               </div>
             </div>
@@ -185,7 +185,7 @@ const Section2 = () => {
                 <br />
                 <div>
                   <Link className="bookNow">Book Now</Link>
-                  <Link className="addList">Add To List</Link>
+                  <Link className="details">See Details</Link>
                 </div>
               </div>
             </div>

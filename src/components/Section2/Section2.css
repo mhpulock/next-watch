@@ -118,7 +118,7 @@ hr {
   color: rgb(44, 42, 42);
   background-color: #ffdd00;
 }
-.addList {
+.details {
   text-decoration: none;
   color: white;
   padding: 7px 20px;
@@ -127,7 +127,7 @@ hr {
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
 }
-.addList:hover {
+.details:hover {
   color: rgb(44, 42, 42);
   background-color: #ffdd00;
 }
