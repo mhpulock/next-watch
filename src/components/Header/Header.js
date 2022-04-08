@@ -2,10 +2,10 @@ import React from "react";
 import "./Header.css";
 import logo from "../../image/travel-logo.png";
 import { Link } from "react-router-dom";
-import useFirebase from "../../hooks/useFirebase";
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
-  const { user, logout } = useFirebase();
+  const { user, logout } = useAuth();
   const photo = user.photoURL;
   return (
     <div className="header-body">
@@ -73,7 +73,7 @@ const Header = () => {
                             </div>
                             <div className="d-flex justify-content-center">
                               <button className="buttonDesign mt-2">
-                                View Profile
+                                VIEW PROFILE
                               </button>
                             </div>
                             <br />
@@ -101,7 +101,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link className="nav-link link-button cursor" to="/Service">
+                <Link className="nav-link link-button cursor" to="/service">
                   SERVICE
                 </Link>
               </li>
@@ -151,8 +151,8 @@ const Header = () => {
                           <span class="card-text">{user.email}</span>
                         </div>
                         <div className="d-flex justify-content-center">
-                          <button className="cursor buttonDesign mt-2">
-                            View Profile
+                          <button className=" buttonDesign mt-2">
+                            VIEW PROFILE
                           </button>
                         </div>
                         <br />
@@ -160,10 +160,7 @@ const Header = () => {
                       </div>
                       <div className="logoutposition">
                         {user?.email && (
-                          <button
-                            onClick={logout}
-                            className="cursor buttonDesign"
-                          >
+                          <button onClick={logout} className=" buttonDesign">
                             LOGOUT
                           </button>
                         )}

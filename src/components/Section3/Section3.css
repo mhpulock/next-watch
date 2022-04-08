@@ -1,0 +1,41 @@
+.section3body {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  color: white;
+  padding: 100px 0;
+  background-position: end;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section3title {
+  font-weight: 700;
+  font-size: 30px;
+}
+.section3title2 {
+  font-weight: 700;
+  font-size: 50px;
+}
+.testFormate {
+  text-align: start;
+}
+.readButton {
+  text-decoration: none;
+  color: black;
+  background-color: #ffd000;
+  border-radius: 20px;
+  padding: 7px 30px;
+}
+.readButton:hover {
+  color: white;
+  background-color: gray;
+}
+.img-position {
+  margin-bottom: -125px;
+}
+
+/* Media query */
+@media (max-width: 992px) {
+  .img-position {
+    width: 90%;
+    margin: 30px;
+  }
+}

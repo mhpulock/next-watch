@@ -69,12 +69,14 @@ const Section1 = () => {
 
             <div className="container">
               <div className="row ">
-                <div className="col-lg-5">
-                  <Link className="linkbutton me-auto" to="#">
-                    PURCHASE NOW
-                  </Link>
+                <div className="col-lg-5 my-3">
+                  <div>
+                    <Link className="linkbutton me-auto " to="#">
+                      PURCHASE NOW
+                    </Link>
+                  </div>
                 </div>
-                <div className="col-lg-5 d-flex  align-item-center">
+                <div className="col-lg-5 my-3 d-flex align-item-center forsmallSrceen">
                   <div>
                     <Link className="linkbutton2 " to="#">
                       READ MORE
@@ -86,7 +88,7 @@ const Section1 = () => {
             </div>
           </div>
 
-          <div className="col-lg-5 px-5">
+          <div className="col-lg-5 px-5 enjoy-logo">
             <img src={enjoy} alt="logo" />
           </div>
         </div>

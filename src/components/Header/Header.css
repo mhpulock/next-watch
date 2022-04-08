@@ -101,8 +101,12 @@ body {
   padding: 7px 20px;
   /* box-shadow: 5px 5px 20px gray; */
   width: 80%;
-  background-color: rgb(26, 25, 25);
+  background-color: rgb(46, 44, 44);
   color: white;
+}
+.buttonDesign:hover {
+  color: black;
+  background-color: rgb(255, 230, 0);
 }
 /* Media query */
 @media (max-width: 992px) {

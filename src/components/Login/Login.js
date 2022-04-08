@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import useFirebase from "../../hooks/useFirebase";
 import "./Login.css";
 import user from "../../image/user.png";
 import password from "../../image/password.png";
 import forgot from "../../image/forgot.png";
 import google from "../../image/google.png";
 import signup from "../../image/signup.png";
+import useAuth from "../../hooks/useAuth";
+import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
-  const { signInUsingGoogle } = useFirebase();
+  const [user, setUser] = useState({});
+  const [error, setError] = useState("");
+  const { signInUsingGoogle } = useAuth();
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/";
 
+  const handleGoogleLogin = () => {
+    signInUsingGoogle()
+      .then((result) => {
+        history.push(redirect_uri);
+        console.log(result.user);
+        setUser(result.user);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
   return (
     <div className="loginbody">
       <br />
@@ -60,7 +78,7 @@ const Login = () => {
               <br />
               <br />
 
-              <button className="buttondesign" onClick={signInUsingGoogle}>
+              <button className="buttondesign" onClick={handleGoogleLogin}>
                 <img className="icon" src={google} alt="google" /> Sign in
               </button>
               <br />
