@@ -1,0 +1,8 @@
+import React from "react";
+import "./SingleProduct.css";
+
+const SingleProduct = () => {
+  return <div></div>;
+};
+
+export default SingleProduct;

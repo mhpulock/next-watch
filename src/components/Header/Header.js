@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import logo from "../../image/travel-logo.png";
+import logo from "../../image/next-watch-logo.png";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
@@ -8,16 +8,19 @@ const Header = () => {
   const { user, logout } = useAuth();
   const photo = user.photoURL;
   return (
-    <div className="header-body">
+    <div className="header-body sticky-top">
       <nav
-        className="navbar navbar-expand-lg navbar-light"
+        className="navbar navbar-expand-lg navbar-light py-0 "
         style={{ backgroundColor: "#FFFFFF" }}
       >
         <div className="container">
           <Link className="navbar-brand" to="/home">
             <div className="navber-logo">
-              <h3>Fab</h3>
-              <img className="img-logo" src={logo} alt="logo" />
+              {/* <img className="img-logo" src={logo} alt="logo" /> */}
+              <span className="logo1">N</span>
+              <span className="logo2">EXT</span>
+              <span className="logo3">W</span>
+              <span className="logo4">ATCH</span>
             </div>
           </Link>
           <button
@@ -73,7 +76,7 @@ const Header = () => {
                             </div>
                             <div className="d-flex justify-content-center">
                               <button className="buttonDesign mt-2">
-                                VIEW PROFILE
+                                PROFILE
                               </button>
                             </div>
                             <br />
@@ -101,8 +104,26 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link className="nav-link link-button cursor" to="/service">
-                  SERVICE
+                <Link className="nav-link link-button cursor" to="/product">
+                  PRODUCT
+                </Link>
+              </li>
+
+              {user?.email && (
+                <li className="nav-item ">
+                  <Link className="nav-link link-button cursor" to="/dashboard">
+                    DASHBOARD
+                  </Link>
+                </li>
+              )}
+              <li className="nav-item ">
+                <Link className="nav-link link-button cursor" to="/contact">
+                  CONTACT
+                </Link>
+              </li>
+              <li className="nav-item ">
+                <Link className="nav-link link-button cursor" to="/about">
+                  ABOUT
                 </Link>
               </li>
 
@@ -152,7 +173,7 @@ const Header = () => {
                         </div>
                         <div className="d-flex justify-content-center">
                           <button className=" buttonDesign mt-2">
-                            VIEW PROFILE
+                            PROFILE
                           </button>
                         </div>
                         <br />

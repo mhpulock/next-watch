@@ -1,41 +1,41 @@
-.section3body {
-  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+.sec3_body {
+  background-color: #fdf1ef;
+  padding: 60px;
+}
+.sec3_custom_row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.sec3_cart {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec3_logo {
+  height: 150px;
+}
+.icon_color {
+  color: #ffa200;
+}
+.sec3_order {
+  border: 1px solid #e4604a;
+  padding: 3px 20px;
+  border-radius: 15px;
+  font-weight: 500;
   color: white;
-  padding: 100px 0;
-  background-position: end;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #e4604a;
 }
-.section3title {
-  font-weight: 700;
-  font-size: 30px;
-}
-.section3title2 {
-  font-weight: 700;
-  font-size: 50px;
-}
-.testFormate {
-  text-align: start;
-}
-.readButton {
-  text-decoration: none;
+.sec3_order:hover {
   color: black;
-  background-color: #ffd000;
-  border-radius: 20px;
-  padding: 7px 30px;
-}
-.readButton:hover {
-  color: white;
-  background-color: gray;
-}
-.img-position {
-  margin-bottom: -125px;
+  background-color: rgb(230, 223, 223);
 }
 
 /* Media query */
 @media (max-width: 992px) {
-  .img-position {
-    width: 90%;
-    margin: 30px;
+  .sec3_custom_row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }

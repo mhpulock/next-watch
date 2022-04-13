@@ -9,8 +9,12 @@ import NotFound from "./components/NotFound/NotFound";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import AuthProvider from "./context/AuthProvider";
-import Service from "./components/Service/Service";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Dashboardhome from "./components/Dashboard/Dashboardhome/Dashboardhome";
+import Product from "./components/Product/Product";
+import SingleProduct from "./components/SingleProduct/SingleProduct";
+import Contact from "./components/Contact/Contact";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -25,14 +29,29 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/service">
-              <Service></Service>
+            <PrivateRoute path="/product">
+              <Product></Product>
             </PrivateRoute>
+            <PrivateRoute path="/product/:productId">
+              <SingleProduct></SingleProduct>
+            </PrivateRoute>
+
             <Route path="/login">
               <Login></Login>
             </Route>
+
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboardhome></Dashboardhome>
+            </PrivateRoute>
+
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/about">
+              <About></About>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

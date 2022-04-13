@@ -7,122 +7,28 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import logo from "../../image/travel-logo.png";
+
 import facebook from "../../image/facebook.png";
 import linkedin from "../../image/linkedin.png";
 import twitter from "../../image/twitter.png";
 import instagram from "../../image/instagram.png";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="my-5">
+    <div className="background_color">
+      <div className="py-5">
         <div className="container">
           <div className="row">
-            <div className="col-lg-2 d-flex justify-content-center my-5 ">
-              <div className="footer-logo">
-                <h3>Fab</h3>
-                <img className="img2-logo" src={logo} alt="logo" />
-              </div>
-            </div>
-            <div className="col-lg-2 mt-3 box-shadow">
-              <h3
-                className="footer-font"
-                style={{
-                  color: "#ff9400",
-                }}
-              >
-                Book Now
-              </h3>
-              <div className="d-flex justify-content-center">
-                <div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faHandPointRight} />
-                    <h6 className="ms-2 footer-font">Flights</h6>
-                  </div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faHandPointRight} />
-                    <h6 className="ms-2 footer-font">Tours</h6>
-                  </div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faHandPointRight} />
-                    <h6 className="ms-2 footer-font">Pakages</h6>
-                  </div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faHandPointRight} />
-                    <h6 className="ms-2 footer-font">Transfer</h6>
-                  </div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faHandPointRight} />
-                    <h6 className="ms-2 footer-font">Car Rent</h6>
-                  </div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faHandPointRight} />
-                    <h6 className="ms-2 footer-font">Cruises</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 mt-3 box-shadow">
-              <h3
-                className="footer-font"
-                style={{
-                  color: "#ff9400",
-                }}
-              >
-                Top Deals
-              </h3>
-              <div className="d-flex justify-content-center">
-                <div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faLocationArrow} />
-                    <h6 className="ms-2 footer-font">Tour Pakages Singapur</h6>
-                  </div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faLocationArrow} />
-                    <h6 className="ms-2 footer-font">Tour Pakages Manila</h6>
-                  </div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faLocationArrow} />
-                    <h6 className="ms-2 footer-font">Tour Pakages New York</h6>
-                  </div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faLocationArrow} />
-                    <h6 className="ms-2 footer-font">Tour Pakages Sanghai</h6>
-                  </div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faLocationArrow} />
-                    <h6 className="ms-2 footer-font">Tour Pakages Hongkong</h6>
-                  </div>
-                  <div className="d-flex justify-content-start align-items-center cursor2">
-                    <FontAwesomeIcon icon={faLocationArrow} />
-                    <h6 className="ms-2 footer-font">Tour Pakages Tokyo</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 mt-3 box-shadow">
-              <h3 className="footer-font" style={{ color: "#ff9400" }}>
-                Contact US
-              </h3>
-
-              <div className="mt-3">
-                <div className="d-flex justify-content-start ">
-                  <FontAwesomeIcon icon={faLocationDot} />
-                  <h6 className="ms-3 footer-font">
-                    House-70, road-13, block-g, Gulsan-1, Dhaka
-                  </h6>
-                </div>
-                <div className="d-flex justify-content-start footer-font">
-                  <FontAwesomeIcon icon={faPhone} />
-                  <h6 className="ms-3 ">+8801733-235567, +8801992-98982323</h6>
-                </div>
-                <div className="d-flex justify-content-start footer-font">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <h6 className="ms-5 ">fabtravel@gmail.com</h6>
-                </div>
-              </div>
+            <div className="col-lg-4">
+              <h1>
+                <span className="footer_title">NEXT</span>WATCH
+              </h1>
+              <p className="footer_des">
+                Next Watch is a best quality online shop. We never compromise on
+                the quality of the product
+              </p>
               <div className="social">
                 <img className="social-logo" src={facebook} alt="icon" />
                 <img className="social-logo" src={twitter} alt="icon" />
@@ -130,12 +36,76 @@ const Footer = () => {
                 <img className="social-logo" src={instagram} alt="icon" />
               </div>
             </div>
+            <div className="col-lg-1"></div>
+            <div className="col-lg-2">
+              <h6>MY ACCOUNT</h6>
+              <div className="item">
+                <small className="cursor2">Mens</small>
+                <br />
+                <small className="cursor2">Womens</small>
+                <br />
+                <small className="cursor2">Accessories</small>
+                <br />
+                <small className="cursor2">Fetured</small>
+                <br />
+                <small className="cursor2">Mens</small>
+                <br />
+                <small className="cursor2">Womens</small>
+              </div>
+              <br />
+            </div>
+            <div className="col-lg-2">
+              <h6>WHY WE CHOOSE</h6>
+              <div className="item">
+                <small className="cursor2">Shipping & Return</small>
+                <br />
+                <small className="cursor2">Secure Shopping</small>
+                <br />
+                <small className="cursor2">Best Quality Product</small>
+                <br />
+                <small className="cursor2">Best Customer Support</small>
+                <br />
+                <small className="cursor2">Affiliates</small>
+                <br />
+                <small className="cursor2">Gallary</small>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <h6>STORE INFORMATION</h6>
+              <br />
+              <div>
+                <div className="d-flex justify-content-start ">
+                  <FontAwesomeIcon
+                    className="fonticon_color"
+                    icon={faLocationDot}
+                  />
+                  <small className="ms-3 footer-font">
+                    House-70, road-13, block-g, Gulsan-1, Dhaka
+                  </small>
+                </div>
+                <div className="d-flex justify-content-start footer-font">
+                  <FontAwesomeIcon className="fonticon_color" icon={faPhone} />
+                  <small className="ms-3 ">
+                    +8801733-235567, +8801992-98982323
+                  </small>
+                </div>
+                <div className="d-flex justify-content-start footer-font">
+                  <FontAwesomeIcon
+                    className="fonticon_color"
+                    icon={faEnvelope}
+                  />
+                  <small className="ms-5 ">nextwatch@gmail.com</small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="mb-2">
-        <span>©2022 All Right Reserved by Fab Travel</span>
+        <span className="copy_write">
+          ©2022 All Right Reserved by <span>NEXT</span>WATCH
+        </span>
       </div>
     </div>
   );

@@ -1,0 +1,12 @@
+.sec4_banner {
+  position: relative;
+}
+.sec4_banner img {
+  width: 360px;
+}
+.posit {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  color: white;
+}

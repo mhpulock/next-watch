@@ -1,3 +1,39 @@
 .banner {
   margin: -15px 0;
+  background-color: #f4f2f3;
+}
+
+.banner_logo {
+  height: 550px;
+}
+.article1 h5 {
+  color: rgb(112, 110, 110);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px;
+  padding: 20px;
+}
+.article1 h1 {
+  text-shadow: none;
+  font-size: 50px;
+  margin: 10px;
+}
+.button_design {
+  margin: 20px;
+  border: 2px solid #e4604a;
+  padding: 10px 30px;
+  font-weight: 500;
+}
+.button_design:hover {
+  background-color: #e4604a;
+  color: white;
+}
+
+/* Media query */
+@media (max-width: 992px) {
+  .banner_logo {
+    height: 400px;
+  }
+  .banner {
+    padding-top: 20px;
+  }
 }

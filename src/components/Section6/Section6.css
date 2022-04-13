@@ -1,0 +1,33 @@
+.sec6_body {
+  padding: 100px;
+}
+.sec6_subs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec6_subs input {
+  width: 25%;
+  padding: 4px 10px;
+}
+.sec6_subs button {
+  border: none;
+  padding: 7px 20px;
+  margin: 5px;
+  color: white;
+  background-color: #e4604a;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.sec6_subs button:hover {
+  color: black;
+  background-color: rgb(231, 224, 224);
+}
+
+/* Media query */
+@media (max-width: 992px) {
+  .sec6_subs input {
+    width: 100%;
+    padding: 4px 10px;
+  }
+}

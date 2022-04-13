@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyAM2ZrV5xCDMAz75dDZQCJHkhxa0qHpw5g",
-  authDomain: "fab-travel.firebaseapp.com",
-  projectId: "fab-travel",
-  storageBucket: "fab-travel.appspot.com",
-  messagingSenderId: "434739740258",
-  appId: "1:434739740258:web:3af14080c4a38122031b3b",
+  apiKey: "AIzaSyB-7SdhTNLyzfZKmGs_awKXoSl6vmGnvDw",
+  authDomain: "next-watch.firebaseapp.com",
+  projectId: "next-watch",
+  storageBucket: "next-watch.appspot.com",
+  messagingSenderId: "150061370530",
+  appId: "1:150061370530:web:211a630789d7c629ec9bfb",
 };
 
 export default firebaseConfig;
