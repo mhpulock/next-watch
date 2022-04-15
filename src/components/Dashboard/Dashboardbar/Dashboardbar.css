@@ -1,5 +1,8 @@
 .navbar_body {
-  padding: 50px 0;
+  padding: 50px 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
 }
 .link-buttons {
@@ -34,4 +37,11 @@
 }
 .cursor:hover::before {
   transform: scale(1, 1);
+}
+
+/* Media query */
+@media (max-width: 992px) {
+  .navbar_body {
+    position: sticky;
+  }
 }

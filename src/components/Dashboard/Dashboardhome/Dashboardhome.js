@@ -2,6 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { useRouteMatch } from "react-router-dom";
 import { Switch } from "react-router-dom";
+import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 import AddProduct from "../AddProduct/AddProduct";
 import Dashboardbar from "../Dashboardbar/Dashboardbar";
 import Makeadmin from "../Makeadmin/Makeadmin";
@@ -17,38 +18,35 @@ const Dashboardhome = () => {
     <div>
       <div className="row ">
         <div className="col-lg-2 dashboard_menu">
-          <div className="p-3">
+          <div className="d_bar">
             <Dashboardbar></Dashboardbar>
           </div>
         </div>
         <div className="col-lg-10 dashboard_show">
-          <div className="p-5">
+          <div className="d_board_show">
             <Switch>
-              <Route exact path={path}>
+              <PrivateRoute exact path={path}>
                 <h1>Welcome to Your Dashboard</h1>
-              </Route>
-              <Route path={`${path}/payment`}>
+              </PrivateRoute>
+              <PrivateRoute path={`${path}/payment`}>
                 <Payment></Payment>
-              </Route>
-              <Route path={`${path}/myorder`}>
+              </PrivateRoute>
+              <PrivateRoute path={`${path}/myorder`}>
                 <MyOrder></MyOrder>
-              </Route>
-              <Route path={`${path}/myorder/:_ID`}>
-                <MyOrder></MyOrder>
-              </Route>
+              </PrivateRoute>
 
-              <Route path={`${path}/manageorder`}>
+              <PrivateRoute path={`${path}/manageorder`}>
                 <ManageOrder></ManageOrder>
-              </Route>
-              <Route path={`${path}/addproduct`}>
+              </PrivateRoute>
+              <PrivateRoute path={`${path}/addproduct`}>
                 <AddProduct></AddProduct>
-              </Route>
-              <Route path={`${path}/makeadmin`}>
+              </PrivateRoute>
+              <PrivateRoute path={`${path}/makeadmin`}>
                 <Makeadmin></Makeadmin>
-              </Route>
-              <Route path={`${path}/manageproduct`}>
+              </PrivateRoute>
+              <PrivateRoute path={`${path}/manageproduct`}>
                 <ManageProduct></ManageProduct>
-              </Route>
+              </PrivateRoute>
             </Switch>
           </div>
         </div>

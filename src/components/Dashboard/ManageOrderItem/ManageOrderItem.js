@@ -1,14 +1,40 @@
 import React from "react";
-import "./MyOrderItem.css";
+import "./ManageOrderItem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const MyOrderItem = (props) => {
+const ManageOrderItem = (props) => {
   const { _id, img, model, shortdes, price, rating, orderStatus } =
     props.product;
+  const updateStatus = "Approved";
 
+  const handleapprove = (Id) => {
+    const user = { updateStatus };
+    fetch(`http://localhost:5000/updateStatus/${Id}`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.modifiedCount) {
+          // alert('Order Successfully Completed');
+          props.buttonclick();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Approved Successfully",
+            showConfirmButton: false,
+            timer: 2000,
+          });
+        }
+        console.log(res);
+      });
+
+    // e.preventDefault();
+  };
   const handledelete = (Id) => {
     const procced = window.confirm("Are You sure, you want to delete?");
 
@@ -92,13 +118,26 @@ const MyOrderItem = (props) => {
         <span className="sec2_price">{price}</span>
       </h5>
       <h4>Order : {orderStatus}</h4>
-      <Link to="/dashboard/myorder">
-        <button className="section2_button" onClick={() => handledelete(_id)}>
-          DELETE
-        </button>
-      </Link>
+      <div>
+        <Link to="/dashboard/manageorder">
+          <button
+            className="manage_order_button"
+            onClick={() => handledelete(_id)}
+          >
+            DELETE
+          </button>
+        </Link>
+        <Link to="/dashboard/manageorder">
+          <button
+            className="manage_order_button"
+            onClick={() => handleapprove(_id)}
+          >
+            APPROVE
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
 
-export default MyOrderItem;
+export default ManageOrderItem;

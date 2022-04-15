@@ -1,0 +1,37 @@
+.sec3_cart {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec3_logo {
+  height: 150px;
+}
+.icon_color {
+  color: #ffa200;
+}
+.high {
+  height: 15px;
+}
+.sec3_order {
+  border: 1px solid #e4604a;
+  padding: 3px 20px;
+  border-radius: 15px;
+  font-weight: 500;
+  color: white;
+  background-color: #e4604a;
+}
+.sec3_order:hover {
+  color: black;
+  background-color: rgb(230, 223, 223);
+}
+.trendy_dolar {
+  color: #e4604a;
+  position: relative;
+  bottom: 6px;
+  font-size: 18px;
+}
+.trendy_price {
+  color: #e4604a;
+  font-size: 25px;
+}

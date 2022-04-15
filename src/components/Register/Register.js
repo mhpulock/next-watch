@@ -21,7 +21,7 @@ const Register = () => {
                 <div>
                   <img className="icon" src={name} alt="name" />
                   <input
-                    className="my-1"
+                    className="my-1 wid"
                     type="email"
                     placeholder="Enter your Name"
                   />
@@ -30,7 +30,7 @@ const Register = () => {
                 <div>
                   <img className="icon" src={email} alt="user" />
                   <input
-                    className="my-1"
+                    className="my-1 wid"
                     type="email"
                     placeholder="Enter your Email"
                   />
@@ -39,7 +39,7 @@ const Register = () => {
                 <div>
                   <img className="icon" src={password} alt="password" />
                   <input
-                    className="my-1"
+                    className="my-1 wid"
                     type="password"
                     placeholder="Enter your Password"
                   />

@@ -1,0 +1,20 @@
+.makeadmin {
+  margin: 100px;
+}
+input {
+  width: 30%;
+  padding: 5px;
+}
+.makeadmin button {
+  border: 1px solid #e4604a;
+  background-color: #e4604a;
+  color: white;
+  border-radius: 20px;
+  padding: 7px 30px;
+  margin: 10px;
+  font-weight: 700;
+}
+.makeadmin button:hover {
+  background-color: white;
+  color: black;
+}

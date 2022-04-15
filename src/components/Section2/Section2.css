@@ -6,39 +6,6 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
-.section2_image {
-  height: 150px;
-}
-.section2_cart {
-  border: 1px solid rgb(185, 181, 181);
-  padding: 30px 10px;
-}
-.section2_button {
-  border: 1px solid #e4604a;
-  padding: 7px 40px;
-  margin: 5px;
-  font-weight: 700;
-  border-radius: 20px;
-  background-color: #e4604a;
-  color: white;
-}
-.section2_button:hover {
-  background-color: rgb(226, 220, 220);
-  color: black;
-}
-
-.sec2_dolar {
-  color: #e4604a;
-  position: relative;
-  bottom: 10px;
-}
-.sec2_price {
-  color: #e4604a;
-  font-size: 35px;
-}
-.cart_b_height {
-  height: 100px;
-}
 /* Media query */
 @media (max-width: 992px) {
   .section2_custom_row {

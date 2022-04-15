@@ -4,17 +4,18 @@
 .section2_cart {
   border: 1px solid rgb(185, 181, 181);
   padding: 20px 10px;
+  background-color: white;
 }
-.section2_button {
+.manage_order_button {
   border: 1px solid #e4604a;
-  padding: 7px 40px;
+  padding: 7px 30px;
   margin: 5px;
   font-weight: 700;
   border-radius: 20px;
   background-color: #e4604a;
   color: white;
 }
-.section2_button:hover {
+.manage_order_button:hover {
   background-color: rgb(226, 220, 220);
   color: black;
 }

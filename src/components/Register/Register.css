@@ -5,6 +5,9 @@ input {
   width: 80%;
   font-family: Arial, Helvetica, sans-serif;
 }
+.wid {
+  width: 70%;
+}
 .registerTitle {
   text-shadow: 5px 5px 5px gray;
 }

@@ -1,0 +1,16 @@
+.product_body {
+  padding: 50px 0;
+}
+.section2_custom_row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+/* Media query */
+@media (max-width: 992px) {
+  .section2_custom_row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

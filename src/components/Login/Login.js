@@ -76,7 +76,7 @@ const Login = () => {
                   <div>
                     <img className="icon" src={username} alt="user-icon" />
                     <input
-                      className="my-1"
+                      className="my-1 wid"
                       type="email"
                       placeholder="Enter your Email"
                     />
@@ -85,7 +85,7 @@ const Login = () => {
                   <div>
                     <img className="icon" src={password} alt="password" />
                     <input
-                      className="my-1"
+                      className="my-1 wid"
                       type="password"
                       placeholder="Enter your Password"
                     />

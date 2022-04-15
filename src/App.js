@@ -12,9 +12,9 @@ import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Dashboardhome from "./components/Dashboard/Dashboardhome/Dashboardhome";
 import Product from "./components/Product/Product";
-import SingleProduct from "./components/SingleProduct/SingleProduct";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
+import PlaceOrder from "./components/PlaceOrder/PlaceOrder";
 
 function App() {
   return (
@@ -29,11 +29,12 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
+            <PrivateRoute path="/product/:productId">
+              <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
+
             <PrivateRoute path="/product">
               <Product></Product>
-            </PrivateRoute>
-            <PrivateRoute path="/product/:productId">
-              <SingleProduct></SingleProduct>
             </PrivateRoute>
 
             <Route path="/login">

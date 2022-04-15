@@ -74,22 +74,22 @@ const Footer = () => {
               <h6>STORE INFORMATION</h6>
               <br />
               <div>
-                <div className="d-flex justify-content-start ">
+                <div className="d-flex justify-content-center ">
                   <FontAwesomeIcon
                     className="fonticon_color"
                     icon={faLocationDot}
                   />
-                  <small className="ms-3 footer-font">
+                  <small className="ms-3 ">
                     House-70, road-13, block-g, Gulsan-1, Dhaka
                   </small>
                 </div>
-                <div className="d-flex justify-content-start footer-font">
+                <div className="d-flex justify-content-center ">
                   <FontAwesomeIcon className="fonticon_color" icon={faPhone} />
                   <small className="ms-3 ">
                     +8801733-235567, +8801992-98982323
                   </small>
                 </div>
-                <div className="d-flex justify-content-start footer-font">
+                <div className="d-flex justify-content-center ">
                   <FontAwesomeIcon
                     className="fonticon_color"
                     icon={faEnvelope}
