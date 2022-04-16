@@ -33,25 +33,30 @@ const AddProduct = () => {
             <div className="addProductForm">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
+                  className="allinput"
                   {...register("img", { required: true })}
                   placeholder="Past Image URL"
                 />
                 <input
+                  className="allinput"
                   {...register("model", { required: true })}
                   placeholder="Product Model"
                   type="text"
                 />
                 <input
+                  className="allinput"
                   {...register("shortdes", { required: true })}
                   placeholder="Product Short Description"
                   type="text"
                 />
                 <input
+                  className="allinput"
                   {...register("price", { required: true })}
                   type="number"
                   placeholder="Enter Price"
                 />
                 <input
+                  className="allinput"
                   {...register("rating", { required: true })}
                   type="number"
                   min="1"
@@ -60,13 +65,14 @@ const AddProduct = () => {
                 />
 
                 <textarea
+                  className="allinput"
                   {...register("description", { required: true })}
                   placeholder="Enter Details Description"
                   rows="6"
                   cols="50"
                 />
 
-                <input className="submitButton" type="submit" />
+                <input className="submitButton allinput" type="submit" />
               </form>
             </div>
           </div>

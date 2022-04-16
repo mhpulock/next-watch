@@ -4,6 +4,13 @@ body {
 }
 .header-body {
 }
+.back_color {
+  background-color: white;
+}
+.navbar_stiky {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 0px 20px gray;
+}
 .img-logo {
   height: 60px;
   width: auto;
@@ -73,8 +80,12 @@ body {
   border-radius: 10px;
   background-color: #fcfafa;
 }
+.cardbody {
+  padding: 20px 0;
+}
 .card-width {
   width: 100%;
+  padding: 20px 0;
 }
 .smallprofileposition {
   position: absolute;

@@ -1,14 +1,12 @@
 h1 {
-  text-shadow: 3px 3px 40px rgb(54, 52, 52);
   font-weight: bold;
 }
 .addProductForm {
   margin: 0 auto;
   width: 80%;
 }
-.addProductForm input,
-textarea {
-  margin: 5px 0;
+.allinput {
+  margin-bottom: 5px;
   width: 100%;
 }
 .submitButton {

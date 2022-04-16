@@ -10,8 +10,8 @@ const Header = () => {
   return (
     <div className="header-body sticky-top">
       <nav
-        className="navbar navbar-expand-lg navbar-light py-0 "
-        style={{ backgroundColor: "#FFFFFF" }}
+        className="navbar navbar-expand-lg navbar-light py-0 back_color"
+        // style={{ backgroundColor: "#FFFFFF" }}
       >
         <div className="container">
           <Link className="navbar-brand" to="/home">
@@ -79,8 +79,6 @@ const Header = () => {
                                 PROFILE
                               </button>
                             </div>
-                            <br />
-                            <br />
                           </div>
                           <div className="logoutposition">
                             {user?.email && (
@@ -176,8 +174,6 @@ const Header = () => {
                             PROFILE
                           </button>
                         </div>
-                        <br />
-                        <br />
                       </div>
                       <div className="logoutposition">
                         {user?.email && (
