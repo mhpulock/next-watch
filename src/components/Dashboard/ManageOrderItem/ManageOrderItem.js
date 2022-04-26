@@ -6,8 +6,17 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ManageOrderItem = (props) => {
-  const { _id, img, model, shortdes, price, rating, orderStatus } =
-    props.product;
+  const {
+    _id,
+    fullName,
+    email,
+    img,
+    model,
+    price,
+    quantity,
+    rating,
+    orderStatus,
+  } = props.product;
   const updateStatus = "Approved";
 
   const handleapprove = (Id) => {
@@ -63,10 +72,9 @@ const ManageOrderItem = (props) => {
 
   return (
     <div className="section2_cart">
-      <img className="section2_image" src={img} alt="logo" />
-      <div className="cart_b_height">
+      <img className="manage_cart_image" src={img} alt="logo" />
+      <div className="manage_cart_b_height">
         <h6 className=" ">{model}</h6>
-        <h6 className=" ">{shortdes}</h6>
       </div>
 
       {rating == 1 ? (
@@ -117,7 +125,11 @@ const ManageOrderItem = (props) => {
         PRICE : <span className="sec2_dolar">$</span>
         <span className="sec2_price">{price}</span>
       </h5>
-      <h4>Order : {orderStatus}</h4>
+      <h6>Quantity : {quantity}</h6>
+      <h5>ORDER : {orderStatus}</h5>
+      <h6>CustOrderName : {fullName}</h6>
+      <h6 className=" ">{email}</h6>
+      <small> P-ID : {_id}</small>
       <div>
         <Link to="/dashboard/manageorder">
           <button

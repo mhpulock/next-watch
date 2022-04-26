@@ -15,6 +15,7 @@ import Product from "./components/Product/Product";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import PlaceOrder from "./components/PlaceOrder/PlaceOrder";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -33,9 +34,9 @@ function App() {
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
 
-            <PrivateRoute path="/product">
+            <Route path="/product">
               <Product></Product>
-            </PrivateRoute>
+            </Route>
 
             <Route path="/login">
               <Login></Login>

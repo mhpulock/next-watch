@@ -8,13 +8,42 @@ import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import add from "../../image/add.png";
+import sub from "../../image/sub.png";
 
 const PlaceOrder = () => {
   const { user } = useAuth();
   const { productId } = useParams();
   const [products, setProducts] = useState({});
+  const [quantity, setQuantity] = useState("1");
+  const [prices, setPrices] = useState(false);
   const { register, handleSubmit, reset } = useForm();
   const orderStatus = "Pending";
+
+  const minus = () => {
+    let quantity1 = parseInt(quantity);
+    let price1 = parseInt(price);
+    if (quantity1 > 1) {
+      quantity1 -= 1;
+      const price2 = quantity1 * price1;
+      const price3 = price2.toString();
+      const quantity2 = quantity1.toString();
+      setPrices(price3);
+      setQuantity(quantity2);
+      console.log(quantity2);
+    }
+  };
+  const plus = () => {
+    let quantity1 = parseInt(quantity);
+    let price1 = parseInt(price);
+    quantity1 += 1;
+    const price2 = quantity1 * price1;
+    const price3 = price2.toString();
+    const quantity2 = quantity1.toString();
+    setPrices(price3);
+    setQuantity(quantity2);
+    console.log(quantity2);
+  };
   const onSubmit = (data) => {
     data.productId = _id;
     data.email = user.email;
@@ -23,7 +52,8 @@ const PlaceOrder = () => {
     data.img = img;
     data.model = model;
     data.shortdes = shortdes;
-    data.price = price;
+    data.price = totalPrice;
+    data.quantity = quantity;
     data.rating = rating;
     data.description = description;
     data.date = Date();
@@ -56,6 +86,7 @@ const PlaceOrder = () => {
   }, []);
 
   const { _id, img, model, shortdes, price, rating, description } = products;
+  const totalPrice = prices ? prices : price;
 
   return (
     <div className="service_body ">
@@ -170,6 +201,26 @@ const PlaceOrder = () => {
                 BEFORE PLACING AN ORDER MUST FILL-UP THE FORM
               </h4>
               <br />
+              <div className="d-flex justify-content-center align-items-center">
+                <div>
+                  <h5>Quantity : </h5>
+                </div>
+                <div className="d-flex ps-2">
+                  <button className="quantity" onClick={minus}>
+                    <img src={sub} alt="sub" />
+                  </button>
+                  <h5 className="px-3">{quantity}</h5>
+                  <button className="quantity" onClick={plus}>
+                    <img src={add} alt="add" />
+                  </button>
+                </div>
+                <div className="ps-5">
+                  <h5>
+                    PRICE : <span className="sec2_dolar">$</span>{" "}
+                    <span className="sec2_price">{totalPrice}</span>
+                  </h5>
+                </div>
+              </div>
               <div className="d-flex justify-content-center">
                 <div>
                   <div className="addproductForm">

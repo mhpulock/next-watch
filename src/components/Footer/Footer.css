@@ -2,6 +2,12 @@
   background-color: rgb(43, 42, 42);
   color: white;
 }
+.hr_class {
+  border: 1px solid gray;
+  width: 80%;
+  margin: 10px auto;
+}
+
 .copy_write {
   color: white;
 }

@@ -3,10 +3,23 @@ import "./Header.css";
 import logo from "../../image/next-watch-logo.png";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
   const { user, logout } = useAuth();
   const photo = user.photoURL;
+  const history = useHistory();
+
+  // const location = {
+  //   pathname: "/home",
+  //   state: { fromDashboard: true },
+  // };
+
+  const handleLocation = () => {
+    // history.replace(location);
+    history.push("/home");
+  };
+
   return (
     <div className="header-body sticky-top">
       <nav
@@ -83,7 +96,10 @@ const Header = () => {
                           <div className="logoutposition">
                             {user?.email && (
                               <button
-                                onClick={logout}
+                                onClick={() => {
+                                  logout();
+                                  handleLocation();
+                                }}
                                 className="buttonDesign "
                               >
                                 LOGOUT
@@ -117,11 +133,6 @@ const Header = () => {
               <li className="nav-item ">
                 <Link className="nav-link link-button cursor" to="/contact">
                   CONTACT
-                </Link>
-              </li>
-              <li className="nav-item ">
-                <Link className="nav-link link-button cursor" to="/about">
-                  ABOUT
                 </Link>
               </li>
 
@@ -177,7 +188,13 @@ const Header = () => {
                       </div>
                       <div className="logoutposition">
                         {user?.email && (
-                          <button onClick={logout} className=" buttonDesign">
+                          <button
+                            onClick={() => {
+                              logout();
+                              handleLocation();
+                            }}
+                            className=" buttonDesign"
+                          >
                             LOGOUT
                           </button>
                         )}

@@ -1,46 +1,38 @@
 import React from "react";
-import "./MyOrderItem.css";
+import "./TrackOrder.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const MyOrderItem = (props) => {
-  const { _id, img, model, shortdes, price, quantity, rating, orderStatus } =
-    props.product;
-
-  const handledelete = (Id) => {
-    const procced = window.confirm("Are You sure, you want to delete?");
-
-    if (procced) {
-      const url = `http://localhost:5000/dashboard/myorder/${Id}`;
-      fetch(url, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((res) => {
-          console.log(res);
-          if (res.deletedCount > 0) {
-            // alert('Product Added Successfully');
-            props.buttonclick();
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: "Delete Successfully",
-              showConfirmButton: false,
-              timer: 1000,
-            });
-          }
-        });
-    }
-  };
+const TrackOrder = (props) => {
+  const {
+    _id,
+    fullName,
+    email,
+    Name,
+    img,
+    model,
+    shortdes,
+    price,
+    quantity,
+    rating,
+    orderStatus,
+    cityname,
+    address,
+    zip,
+    mobile,
+    description,
+    date,
+  } = props.trackitem;
 
   return (
     <div className="section2_cart">
-      <img className="section2_image" src={img} alt="logo" />
-      <div className="cart_b_height">
+      <img className="manage_cart_image" src={img} alt="logo" />
+      <div className="manage_cart_b_height">
+        <small>P-ID : {_id}</small>
         <h6 className=" ">{model}</h6>
-        <h6 className=" ">{shortdes}</h6>
+        <h6>{shortdes}</h6>
       </div>
 
       {rating == 1 ? (
@@ -92,15 +84,19 @@ const MyOrderItem = (props) => {
         <span className="sec2_price">{price}</span>
       </h5>
       <h6>Quantity : {quantity}</h6>
-      <h4>Order : {orderStatus}</h4>
-      <small>P-ID : {_id}</small>
-      <Link to="/dashboard/myorder">
-        <button className="section2_button" onClick={() => handledelete(_id)}>
-          DELETE
-        </button>
-      </Link>
+      <h5>ORDER : {orderStatus}</h5>
+      <h6 className=" ">Email : {email}</h6>
+      <h6>Order Name : {fullName}</h6>
+      <h6>User Name : {Name}</h6>
+      <h6>City : {cityname}</h6>
+      <h6>Address : {address}</h6>
+      <h6>Zip : {zip}</h6>
+      <h6>Mobile : {mobile}</h6>
+      <h6>Order Date : {date}</h6>
+      <h6>Description : {description}</h6>
+      <div></div>
     </div>
   );
 };
 
-export default MyOrderItem;
+export default TrackOrder;

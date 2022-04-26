@@ -7,7 +7,6 @@ import "./AddProduct.css";
 const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
     axios.post("http://localhost:5000/addproduct", data).then((res) => {
       if (res.data.insertedId) {
         // sweet alert2

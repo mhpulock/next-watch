@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../../../hooks/useAuth";
+import { Spinner } from "react-bootstrap";
 import { useRouteMatch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Dashboardbar.css";
@@ -7,50 +8,35 @@ import "./Dashboardbar.css";
 const Dashboardbar = () => {
   let { url } = useRouteMatch();
   const { user } = useAuth();
-  const [admin, setAdmin] = useState(false);
-
+  const [admin, setAdmin] = useState("");
   useEffect(() => {
     fetch(`http://localhost:5000/findadmin/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         if (data[0]?.role == "admin") {
-          setAdmin(true);
+          setAdmin("true");
         } else {
-          setAdmin(false);
+          setAdmin("false");
         }
       });
   }, [user?.email]);
+
+  console.log("search admin " + admin);
 
   return (
     <div className="navbar_body ">
       <div>
         <ul className="navbar-nav ">
-          {!admin && (
+          {admin === "true" ? (
             <span>
               <li className="nav-item ">
                 <Link
                   className="nav-link link-buttons cursor"
-                  to={`${url}/payment`}
+                  to={`${url}/manageuser`}
                 >
-                  PAYMENT
+                  MANAGE USER
                 </Link>
               </li>
-
-              <li className="nav-item ">
-                <Link
-                  className="nav-link link-buttons cursor"
-                  to={`${url}/myorder`}
-                >
-                  MY ORDER
-                </Link>
-              </li>
-            </span>
-          )}
-
-          <br />
-
-          {admin && (
-            <span>
               <li className="nav-item ">
                 <Link
                   className="nav-link link-buttons cursor"
@@ -76,6 +62,7 @@ const Dashboardbar = () => {
                   MANAGE PRODUCT
                 </Link>
               </li>
+
               <li className="nav-item ">
                 <Link
                   className="nav-link link-buttons cursor"
@@ -84,7 +71,37 @@ const Dashboardbar = () => {
                   MAKE ADMIN
                 </Link>
               </li>
+              <li className="nav-item ">
+                <Link
+                  className="nav-link link-buttons cursor"
+                  to={`${url}/subscriber`}
+                >
+                  SUBSCRIBER
+                </Link>
+              </li>
             </span>
+          ) : admin === "false" ? (
+            <span>
+              <li className="nav-item ">
+                <Link
+                  className="nav-link link-buttons cursor"
+                  to={`${url}/payment`}
+                >
+                  PAYMENT
+                </Link>
+              </li>
+
+              <li className="nav-item ">
+                <Link
+                  className="nav-link link-buttons cursor"
+                  to={`${url}/myorder`}
+                >
+                  MY ORDER
+                </Link>
+              </li>
+            </span>
+          ) : (
+            <Spinner animation="border" variant="warning" />
           )}
         </ul>
       </div>

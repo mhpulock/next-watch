@@ -8,8 +8,10 @@ import Dashboardbar from "../Dashboardbar/Dashboardbar";
 import Makeadmin from "../Makeadmin/Makeadmin";
 import ManageOrder from "../ManageOrder/ManageOrder";
 import ManageProduct from "../ManageProduct/ManageProduct";
+import ManageUser from "../ManageUser/ManageUser";
 import MyOrder from "../MyOrder/MyOrder";
 import Payment from "../Payment/Payment";
+import Subscriber from "../Subscriber/Subscriber";
 import "./Dashboardhome.css";
 
 const Dashboardhome = () => {
@@ -46,6 +48,12 @@ const Dashboardhome = () => {
               </PrivateRoute>
               <PrivateRoute path={`${path}/manageproduct`}>
                 <ManageProduct></ManageProduct>
+              </PrivateRoute>
+              <PrivateRoute path={`${path}/manageuser`}>
+                <ManageUser></ManageUser>
+              </PrivateRoute>
+              <PrivateRoute path={`${path}/subscriber`}>
+                <Subscriber></Subscriber>
               </PrivateRoute>
             </Switch>
           </div>

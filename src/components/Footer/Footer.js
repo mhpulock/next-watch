@@ -1,7 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHandPointRight,
-  faLocationArrow,
   faLocationDot,
   faPhone,
   faEnvelope,
@@ -38,23 +36,6 @@ const Footer = () => {
             </div>
             <div className="col-lg-1"></div>
             <div className="col-lg-2">
-              <h6>MY ACCOUNT</h6>
-              <div className="item">
-                <small className="cursor2">Mens</small>
-                <br />
-                <small className="cursor2">Womens</small>
-                <br />
-                <small className="cursor2">Accessories</small>
-                <br />
-                <small className="cursor2">Fetured</small>
-                <br />
-                <small className="cursor2">Mens</small>
-                <br />
-                <small className="cursor2">Womens</small>
-              </div>
-              <br />
-            </div>
-            <div className="col-lg-2">
               <h6>WHY WE CHOOSE</h6>
               <div className="item">
                 <small className="cursor2">Shipping & Return</small>
@@ -64,10 +45,21 @@ const Footer = () => {
                 <small className="cursor2">Best Quality Product</small>
                 <br />
                 <small className="cursor2">Best Customer Support</small>
+              </div>
+              <br />
+            </div>
+            <div className="col-lg-2">
+              <h6>COMPANY</h6>
+              <div className="item">
+                <small className="cursor2">About Us</small>
                 <br />
-                <small className="cursor2">Affiliates</small>
+                <small className="cursor2">Contact Us</small>
                 <br />
-                <small className="cursor2">Gallary</small>
+                <small className="cursor2">Privacy Policy</small>
+                <br />
+                <small className="cursor2">Terms of Use</small>
+                <br />
+                <small className="cursor2">Refund Policy</small>
               </div>
             </div>
             <div className="col-lg-3">
@@ -102,7 +94,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mb-2">
+      <div className="pb-3">
+        <hr className="hr_class" />
         <span className="copy_write">
           ©2022 All Right Reserved by <span>NEXT</span>WATCH
         </span>

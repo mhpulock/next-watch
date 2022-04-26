@@ -35,6 +35,12 @@ textarea {
 .description p {
   text-align: justify;
 }
+.quantity img {
+  width: 20px;
+}
+.quantity {
+  border: none;
+}
 /* Media query */
 @media (max-width: 992px) {
   .bookingCard {

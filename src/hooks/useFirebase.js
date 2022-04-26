@@ -6,8 +6,8 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signOut,
+  getIdToken,
 } from "firebase/auth";
-import { useHistory } from "react-router-dom";
 
 initializeAuthentication();
 
@@ -37,6 +37,9 @@ const useFirebase = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         console.log(user);
+        getIdToken(user).then((idToken) =>
+          localStorage.setItem("idToken", idToken)
+        );
         setUser(user);
       } else {
         setUser({});

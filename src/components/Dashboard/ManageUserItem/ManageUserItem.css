@@ -1,0 +1,17 @@
+.hr_tag {
+  margin: 0;
+  padding: 0;
+}
+.user_delete_button {
+  border: 1px solid #e4604a;
+  padding: 5px 20px;
+  margin: 5px;
+  font-weight: 700;
+  border-radius: 20px;
+  background-color: #e4604a;
+  color: white;
+}
+.user_delete_button:hover {
+  background-color: rgb(226, 220, 220);
+  color: black;
+}

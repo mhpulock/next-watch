@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Section6.css";
 import support from "../../image/24hours.png";
 import payment from "../../image/payment.png";
 import festival from "../../image/festival.png";
 import shipping from "../../image/shipping.png";
+import Swal from "sweetalert2";
+import axios from "axios";
 
 const Section6 = () => {
+  const [subscrib, setSubscrib] = useState([]);
+
+  const handleSub = (e) => {
+    const subscriber = e.target.value;
+    setSubscrib(subscriber);
+    console.log("set " + subscriber);
+  };
+
+  const handleSubscrib = () => {
+    const subscribers = { subscribers: subscrib };
+    axios.post("http://localhost:5000/subscriber", subscribers).then((res) => {
+      if (res.data.insertedId) {
+        // sweet alert2
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Subscrib Succesfully",
+          showConfirmButton: false,
+          timer: 1000,
+        });
+        document.getElementById("p_id").reset();
+      }
+    });
+  };
+
   return (
     <div className="sec6_body">
       <div className="container"></div>
@@ -39,8 +66,18 @@ const Section6 = () => {
       <div className="py-5">
         <h3 className="pt-5">NEWSLETTER</h3>
         <div className="sec6_subs">
-          <input type="text" placeholder="Enter Your Email" />
-          <button>SUBSCRIB</button>
+          <form id="p_id">
+            <input
+              className="subinput"
+              name="subscribEmail"
+              type="email"
+              placeholder="Enter Your Email"
+              onChange={(e) => handleSub(e)}
+            />
+          </form>
+          <button className="" onClick={handleSubscrib}>
+            SUBSCRIB
+          </button>
         </div>
       </div>
     </div>

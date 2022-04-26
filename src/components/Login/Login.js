@@ -19,6 +19,7 @@ const Login = () => {
   const history = useHistory();
   const redirect_uri = location.state?.from || "/";
   const [isLoading, setIsLoading] = useState(true);
+  console.log(location.state?.from?.pathname);
 
   const handleGoogleLogin = () => {
     signInUsingGoogle()
@@ -37,7 +38,8 @@ const Login = () => {
 
   // for login info update on database
   const saveUser = (email, displayName) => {
-    const user = { email, displayName };
+    const date = Date();
+    const user = { email, displayName, date };
 
     fetch("http://localhost:5000/adduser", {
       method: "PUT",

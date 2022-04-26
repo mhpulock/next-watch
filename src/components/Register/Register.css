@@ -9,19 +9,19 @@ input {
   width: 70%;
 }
 .registerTitle {
-  text-shadow: 5px 5px 5px gray;
+  /* text-shadow: 5px 5px 5px gray; */
 }
 .registerbuttondesign {
   border-radius: 20px;
   height: 35px;
   border: none;
   padding: 7px 20px;
-  box-shadow: 5px 5px 20px gray;
+  box-shadow: 3px 3px 20px gray;
   width: 80%;
 }
 .cardRegisterbody {
   width: 100%;
-  box-shadow: 10px 10px 40px gray;
+  box-shadow: 3px 3px 20px rgb(0, 0, 0);
   border: 2px solid gray;
   border-radius: 10px;
   padding: 50px 0 50px 0;
