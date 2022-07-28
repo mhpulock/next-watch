@@ -6,7 +6,7 @@
 
 ### \*\*\*In case of ordering any product, signup must be done through google.
 
-### \*\*\*There is an admin panel for admin. Admin panel has product add, product update, delete option.
+### \*\*\*There is an admin panel for admin. Admin panel has product add, product update, and delete options.
 
 ### \*\*\*User ID and order management options are available.
 
