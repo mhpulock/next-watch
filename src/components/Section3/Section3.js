@@ -7,7 +7,7 @@ import TrendyItem from "../TrendyItem/TrendyItem";
 const Section3 = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/addproduct")
+    fetch("https://ancient-springs-87051.herokuapp.com/addproduct")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

@@ -10,7 +10,7 @@ const Subscriberitem = (props) => {
     const procced = window.confirm("Are You sure, you want to delete?");
 
     if (procced) {
-      const url = `http://localhost:5000/dashboard/subscriber/${Id}`;
+      const url = `https://ancient-springs-87051.herokuapp.com/dashboard/subscriber/${Id}`;
       fetch(url, {
         method: "DELETE",
       })

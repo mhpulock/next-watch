@@ -10,7 +10,9 @@ const Dashboardbar = () => {
   const { user } = useAuth();
   const [admin, setAdmin] = useState("");
   useEffect(() => {
-    fetch(`http://localhost:5000/findadmin/${user?.email}`)
+    fetch(
+      `https://ancient-springs-87051.herokuapp.com/findadmin/${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data[0]?.role == "admin") {

@@ -18,19 +18,24 @@ const Section6 = () => {
 
   const handleSubscrib = () => {
     const subscribers = { subscribers: subscrib };
-    axios.post("http://localhost:5000/subscriber", subscribers).then((res) => {
-      if (res.data.insertedId) {
-        // sweet alert2
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Subscrib Succesfully",
-          showConfirmButton: false,
-          timer: 1000,
-        });
-        document.getElementById("p_id").reset();
-      }
-    });
+    axios
+      .post(
+        "https://ancient-springs-87051.herokuapp.com/subscriber",
+        subscribers
+      )
+      .then((res) => {
+        if (res.data.insertedId) {
+          // sweet alert2
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Subscrib Succesfully",
+            showConfirmButton: false,
+            timer: 1000,
+          });
+          document.getElementById("p_id").reset();
+        }
+      });
   };
 
   return (

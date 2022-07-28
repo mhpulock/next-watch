@@ -23,7 +23,7 @@ const ManageOrder = () => {
   useEffect(() => {
     const startDates = String(searchDate);
     const date = startDates.slice(0, 15);
-    fetch("http://localhost:5000/myorder")
+    fetch("https://ancient-springs-87051.herokuapp.com/myorder")
       .then((res) => res.json())
       .then((data) => {
         const result = data.filter(
@@ -41,7 +41,7 @@ const ManageOrder = () => {
   const buttonclick = () => {
     const startDates = String(searchDate);
     const date = startDates.slice(0, 15);
-    fetch("http://localhost:5000/myorder")
+    fetch("https://ancient-springs-87051.herokuapp.com/myorder")
       .then((res) => res.json())
       .then((data) => {
         const result = data.filter(
@@ -60,7 +60,7 @@ const ManageOrder = () => {
     setTrack("false");
     const startDates = String(dates);
     const date = startDates.slice(0, 15);
-    fetch("http://localhost:5000/myorder")
+    fetch("https://ancient-springs-87051.herokuapp.com/myorder")
       .then((res) => res.json())
       .then((data) => {
         const result = data.filter(
@@ -83,7 +83,7 @@ const ManageOrder = () => {
     setTrack("false");
     const startDates = String(searchDate);
     const date = startDates.slice(0, 15);
-    fetch("http://localhost:5000/myorder")
+    fetch("https://ancient-springs-87051.herokuapp.com/myorder")
       .then((res) => res.json())
       .then((data) => {
         const result = data.filter(
@@ -107,7 +107,7 @@ const ManageOrder = () => {
   const trackButton = () => {
     setTrack("true");
     console.log("type : " + typeof searchItem);
-    fetch("http://localhost:5000/myorder")
+    fetch("https://ancient-springs-87051.herokuapp.com/myorder")
       .then((res) => res.json())
       .then((data) => {
         const result = data.filter((product) => product._id == searchItem);

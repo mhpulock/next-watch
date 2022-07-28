@@ -12,7 +12,7 @@ const Makeadmin = () => {
   const { reset } = useForm();
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("http://localhost:5000/dashboard/makeadmin", {
+    fetch("https://ancient-springs-87051.herokuapp.com/dashboard/makeadmin", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(user),

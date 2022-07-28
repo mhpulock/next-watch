@@ -8,7 +8,7 @@ const Product = () => {
   const [product, setProducts] = useState([]);
   const [spiners, setSpiners] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/addproduct")
+    fetch("https://ancient-springs-87051.herokuapp.com/addproduct")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

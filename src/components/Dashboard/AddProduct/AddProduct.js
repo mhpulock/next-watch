@@ -7,19 +7,21 @@ import "./AddProduct.css";
 const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/addproduct", data).then((res) => {
-      if (res.data.insertedId) {
-        // sweet alert2
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Added Succesfully",
-          showConfirmButton: false,
-          timer: 1000,
-        });
-        reset();
-      }
-    });
+    axios
+      .post("https://ancient-springs-87051.herokuapp.com/addproduct", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          // sweet alert2
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Added Succesfully",
+            showConfirmButton: false,
+            timer: 1000,
+          });
+          reset();
+        }
+      });
   };
 
   return (

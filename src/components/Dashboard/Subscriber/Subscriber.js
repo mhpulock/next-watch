@@ -8,7 +8,7 @@ const Subscriber = () => {
   const [spiners, setSpiners] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/subscriber")
+    fetch("https://ancient-springs-87051.herokuapp.com/subscriber")
       .then((res) => res.json())
       .then((data) => {
         setSub(data);
@@ -17,7 +17,7 @@ const Subscriber = () => {
   }, []);
 
   const buttonclick = () => {
-    fetch("http://localhost:5000/subscriber")
+    fetch("https://ancient-springs-87051.herokuapp.com/subscriber")
       .then((res) => res.json())
       .then((data) => {
         setSub(data);

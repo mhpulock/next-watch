@@ -41,7 +41,7 @@ const Login = () => {
     const date = Date();
     const user = { email, displayName, date };
 
-    fetch("http://localhost:5000/adduser", {
+    fetch("https://ancient-springs-87051.herokuapp.com/adduser", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(user),

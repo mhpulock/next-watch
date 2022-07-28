@@ -58,24 +58,26 @@ const PlaceOrder = () => {
     data.description = description;
     data.date = Date();
 
-    axios.post("http://localhost:5000/myorder", data).then((res) => {
-      if (res.data.insertedId) {
-        // sweet alert2
+    axios
+      .post("https://ancient-springs-87051.herokuapp.com/myorder", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          // sweet alert2
 
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Order Completed Succesfully",
-          showConfirmButton: false,
-          timer: 1000,
-        });
-        reset();
-      }
-    });
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Order Completed Succesfully",
+            showConfirmButton: false,
+            timer: 1000,
+          });
+          reset();
+        }
+      });
   };
 
   useEffect(() => {
-    const url = "http://localhost:5000/addproduct";
+    const url = "https://ancient-springs-87051.herokuapp.com/addproduct";
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

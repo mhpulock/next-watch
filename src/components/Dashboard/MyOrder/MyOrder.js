@@ -12,7 +12,7 @@ const MyOrder = () => {
   const [spiners, setSpiners] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myorder/${user.email}`, {
+    fetch(`https://ancient-springs-87051.herokuapp.com/myorder/${user.email}`, {
       headers: {
         authorization: `bearer ${localStorage.getItem("idToken")}`,
       },
@@ -31,7 +31,7 @@ const MyOrder = () => {
   }, [user?.email]);
 
   const buttonclick = () => {
-    fetch(`http://localhost:5000/myorder/${user.email}`, {
+    fetch(`https://ancient-springs-87051.herokuapp.com/myorder/${user.email}`, {
       headers: {
         authorization: `bearer ${localStorage.getItem("idToken")}`,
       },

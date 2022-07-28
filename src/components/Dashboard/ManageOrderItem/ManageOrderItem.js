@@ -21,7 +21,7 @@ const ManageOrderItem = (props) => {
 
   const handleapprove = (Id) => {
     const user = { updateStatus };
-    fetch(`http://localhost:5000/updateStatus/${Id}`, {
+    fetch(`https://ancient-springs-87051.herokuapp.com/updateStatus/${Id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(user),
@@ -48,7 +48,7 @@ const ManageOrderItem = (props) => {
     const procced = window.confirm("Are You sure, you want to delete?");
 
     if (procced) {
-      const url = `http://localhost:5000/dashboard/myorder/${Id}`;
+      const url = `https://ancient-springs-87051.herokuapp.com/dashboard/myorder/${Id}`;
       fetch(url, {
         method: "DELETE",
       })

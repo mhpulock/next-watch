@@ -13,7 +13,7 @@ const MyOrderItem = (props) => {
     const procced = window.confirm("Are You sure, you want to delete?");
 
     if (procced) {
-      const url = `http://localhost:5000/dashboard/myorder/${Id}`;
+      const url = `https://ancient-springs-87051.herokuapp.com/dashboard/myorder/${Id}`;
       fetch(url, {
         method: "DELETE",
       })

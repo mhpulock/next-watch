@@ -8,7 +8,7 @@ const ManageUser = () => {
   const [spiners, setSpiners] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/user")
+    fetch("https://ancient-springs-87051.herokuapp.com/user")
       .then((res) => res.json())
       .then((data) => {
         setUser(data);
@@ -17,7 +17,7 @@ const ManageUser = () => {
   }, []);
 
   const buttonclick = () => {
-    fetch("http://localhost:5000/user")
+    fetch("https://ancient-springs-87051.herokuapp.com/user")
       .then((res) => res.json())
       .then((data) => {
         setUser(data);
